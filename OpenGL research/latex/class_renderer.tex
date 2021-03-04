@@ -1,0 +1,192 @@
+\hypertarget{class_renderer}{}\doxysection{Renderer Class Reference}
+\label{class_renderer}\index{Renderer@{Renderer}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_renderer_abc510df319f1c4dbdc54d866a771fa12}{Tex\+Init}} (unsigned int max\+Tex\+Width, unsigned int max\+Tex\+Height, unsigned int num\+Textures)=0
+\begin{DoxyCompactList}\small\item\em Initializes the texture functionality by creating immutable storage for textures. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a041fd7cf3db15aaa2fbc6189f7b5ec33}{draw\+Rectangle}} (glm\+::vec2 origin, glm\+::vec2 size, glm\+::vec4 color)=0
+\begin{DoxyCompactList}\small\item\em Creates a rectangle on the stack that is immediately discarded after drawing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a563b32f2197be20b7b6e2850d3e7eb5b}{draw\+Quadrangle}} (glm\+::vec2 p1, glm\+::vec2 p2, glm\+::vec2 p3, glm\+::vec2 p4, glm\+::vec4 color)=0
+\begin{DoxyCompactList}\small\item\em Creates a quadrangle out of any four points on the stack that is immediately discarded after drawing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a2dd015e1d1cc20aee1e7bc212f741d24}{draw\+Rectangle}} (glm\+::vec2 origin, glm\+::vec2 size, std\+::string tex\+Path)=0
+\begin{DoxyCompactList}\small\item\em Creates a rectangle on the stack that is immediately discarded after drawing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a220120c8dc8ecdbe6fed8f2d7f932232}{draw\+Quadrangle}} (glm\+::vec2 p1, glm\+::vec2 p2, glm\+::vec2 p3, glm\+::vec2 p4, std\+::string tex\+Path)=0
+\begin{DoxyCompactList}\small\item\em Creates a quadrangle out of any four points on the stack that is immediately discarded after drawing. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a949fa84aaa361e558bdbb864d11c389e}{Display}} ()=0
+\begin{DoxyCompactList}\small\item\em Displays everything that was drawn before calling it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a66e34c5c3ddeb65800865ede318c6137}{load\+Texture}} (std\+::string tex\+Path)=0
+\begin{DoxyCompactList}\small\item\em Allows you to load a texture before using it. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_renderer_a319a8781df4d5252995e1af9a180e9b9}{draw}} (\mbox{\hyperlink{class_i_drawable}{IDrawable}} $\ast$drawable)=0
+\begin{DoxyCompactList}\small\item\em Draws an \mbox{\hyperlink{class_i_drawable}{IDrawable}} object on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_renderer_a949fa84aaa361e558bdbb864d11c389e}\label{class_renderer_a949fa84aaa361e558bdbb864d11c389e}} 
+\index{Renderer@{Renderer}!Display@{Display}}
+\index{Display@{Display}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{Display()}{Display()}}
+{\footnotesize\ttfamily virtual void Renderer\+::\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays everything that was drawn before calling it. 
+
+\begin{DoxyNote}{Note}
+You need to re-\/draw shapes and display them for each frame you want to generate. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_renderer_a319a8781df4d5252995e1af9a180e9b9}\label{class_renderer_a319a8781df4d5252995e1af9a180e9b9}} 
+\index{Renderer@{Renderer}!draw@{draw}}
+\index{draw@{draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Renderer\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_drawable}{IDrawable}} $\ast$}]{drawable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draws an \mbox{\hyperlink{class_i_drawable}{IDrawable}} object on the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drawable} & A drawable object pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a563b32f2197be20b7b6e2850d3e7eb5b}\label{class_renderer_a563b32f2197be20b7b6e2850d3e7eb5b}} 
+\index{Renderer@{Renderer}!drawQuadrangle@{drawQuadrangle}}
+\index{drawQuadrangle@{drawQuadrangle}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{drawQuadrangle()}{drawQuadrangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Renderer\+::draw\+Quadrangle (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{p1,  }\item[{glm\+::vec2}]{p2,  }\item[{glm\+::vec2}]{p3,  }\item[{glm\+::vec2}]{p4,  }\item[{glm\+::vec4}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a quadrangle out of any four points on the stack that is immediately discarded after drawing. 
+
+\begin{DoxyNote}{Note}
+The order needs to be counter clockwise.~\newline
+Can be used as a shorter alternative to \mbox{\hyperlink{class_renderer_a319a8781df4d5252995e1af9a180e9b9}{draw()}} without the need to create an object. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Lower left corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p2} & Lower right corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p3} & Upper rigt corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p4} & Upper left corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em color} & The color of the rectangle in rgba format. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a220120c8dc8ecdbe6fed8f2d7f932232}\label{class_renderer_a220120c8dc8ecdbe6fed8f2d7f932232}} 
+\index{Renderer@{Renderer}!drawQuadrangle@{drawQuadrangle}}
+\index{drawQuadrangle@{drawQuadrangle}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{drawQuadrangle()}{drawQuadrangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Renderer\+::draw\+Quadrangle (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{p1,  }\item[{glm\+::vec2}]{p2,  }\item[{glm\+::vec2}]{p3,  }\item[{glm\+::vec2}]{p4,  }\item[{std\+::string}]{tex\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a quadrangle out of any four points on the stack that is immediately discarded after drawing. 
+
+\begin{DoxyNote}{Note}
+The order needs to be counter clockwise. It should start from the lower left corner if you want the texture to be positioned upright.~\newline
+Can be used as a shorter alternative to \mbox{\hyperlink{class_renderer_a319a8781df4d5252995e1af9a180e9b9}{draw()}} without the need to create an object. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p1} & Lower left corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p2} & Lower right corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p3} & Upper rigt corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em p4} & Upper left corner. $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em tex\+Path} & The path to the texture. A black shape will be drawn if it doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a041fd7cf3db15aaa2fbc6189f7b5ec33}\label{class_renderer_a041fd7cf3db15aaa2fbc6189f7b5ec33}} 
+\index{Renderer@{Renderer}!drawRectangle@{drawRectangle}}
+\index{drawRectangle@{drawRectangle}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{drawRectangle()}{drawRectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Renderer\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{origin,  }\item[{glm\+::vec2}]{size,  }\item[{glm\+::vec4}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a rectangle on the stack that is immediately discarded after drawing. 
+
+\begin{DoxyNote}{Note}
+Can be used as a shorter alternative to \mbox{\hyperlink{class_renderer_a319a8781df4d5252995e1af9a180e9b9}{draw()}} without the need to create an object. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin point (lower left corner). $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em size} & The width and height of the rectangle. \\
+\hline
+{\em color} & The color of the rectangle in rgba format. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a2dd015e1d1cc20aee1e7bc212f741d24}\label{class_renderer_a2dd015e1d1cc20aee1e7bc212f741d24}} 
+\index{Renderer@{Renderer}!drawRectangle@{drawRectangle}}
+\index{drawRectangle@{drawRectangle}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{drawRectangle()}{drawRectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Renderer\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{origin,  }\item[{glm\+::vec2}]{size,  }\item[{std\+::string}]{tex\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a rectangle on the stack that is immediately discarded after drawing. 
+
+\begin{DoxyNote}{Note}
+Can be used as a shorter alternative to \mbox{\hyperlink{class_renderer_a319a8781df4d5252995e1af9a180e9b9}{draw()}} without the need to create an object. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em origin} & The origin point (lower left corner). $<$-\/1.\+0, 1.\+0$>$ range of coordinates. \\
+\hline
+{\em size} & The width and height of the rectangle. \\
+\hline
+{\em tex\+Path} & The path to the texture. A black shape will be drawn if it doesn\textquotesingle{}t exist. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_a66e34c5c3ddeb65800865ede318c6137}\label{class_renderer_a66e34c5c3ddeb65800865ede318c6137}} 
+\index{Renderer@{Renderer}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily virtual void Renderer\+::load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{tex\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Allows you to load a texture before using it. 
+
+\begin{DoxyNote}{Note}
+If this is not used, the texture will be loaded on its first use in the program, which can cause unwanted delays. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em tex\+Path} & The path to the texture. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_renderer_abc510df319f1c4dbdc54d866a771fa12}\label{class_renderer_abc510df319f1c4dbdc54d866a771fa12}} 
+\index{Renderer@{Renderer}!TexInit@{TexInit}}
+\index{TexInit@{TexInit}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{TexInit()}{TexInit()}}
+{\footnotesize\ttfamily virtual void Renderer\+::\+Tex\+Init (\begin{DoxyParamCaption}\item[{unsigned int}]{max\+Tex\+Width,  }\item[{unsigned int}]{max\+Tex\+Height,  }\item[{unsigned int}]{num\+Textures }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initializes the texture functionality by creating immutable storage for textures. 
+
+This storage provides incredible speed at the cost of wasting vram if the textures aren\textquotesingle{}t of similar sizes. This is because the width and height of the storage need to be able to fit the biggest texture. Smaller textures will use \char`\"{}slots\char`\"{} of the same size as the biggest texture. 
+\begin{DoxyParams}{Parameters}
+{\em max\+Tex\+Width} & The height of the texture storage. Texture used in the program can\textquotesingle{}t be higher than this. \\
+\hline
+{\em max\+Tex\+Height} & The width of the texture storage. Texture used in the program can\textquotesingle{}t be wider than this. \\
+\hline
+{\em num\+Textures} & The depth of the texture storage. There can\textquotesingle{}t be more individual textures than this number in the program. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Renderer.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,199 @@
+\hypertarget{class_i_drawable}{}\doxysection{IDrawable Class Reference}
+\label{class_i_drawable}\index{IDrawable@{IDrawable}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_i_drawable_afd00b9919be78dac76928505134bc2e0}{get\+Center\+Point}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the center of the drawable, for example for scaling. It is calculated by averaging all points forming the shape. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_i_drawable}{IDrawable}} $\ast$ \mbox{\hyperlink{class_i_drawable_a814e424836c1783279874ec5d5e01e56}{clone}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to create a copy of the drawable. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_i_drawable_a3efc614e1e207341fde7fc79e7bffa3b}{get\+Tex\+Path}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the texture path of the drawable. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{class_i_drawable_a155ac70d472ef64f0138ce4c7d623a95}{get\+Element\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the triangle formation data. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ glm\+::vec2 $>$ \mbox{\hyperlink{class_i_drawable_aeef2059ed5135fc50c90044de2899568}{get\+Vertex\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the vertex position data. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ glm\+::vec2 $>$ \mbox{\hyperlink{class_i_drawable_ab7a40a77740ae3edbaa4d87212be5346}{get\+Tex\+Coords\+Data}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the texture coordinate data. \end{DoxyCompactList}\item 
+virtual glm\+::vec4 \mbox{\hyperlink{class_i_drawable_a695a97dd99abfb924bb11a2954af195d}{get\+Color}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the current color of the drawable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_drawable_adf27746231399178c3fd34469d46beff}{set\+Color}} (glm\+::vec4 color)=0
+\begin{DoxyCompactList}\small\item\em Sets the color of the drawable. \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_i_drawable_a6a322029aa187e417f384fbe74ca816f}{get\+Translation}} ()=0
+\begin{DoxyCompactList}\small\item\em Retrieves the current translation of the drawable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_drawable_a23f2f1b002766d250521fc585dae53cc}{set\+Translation}} (glm\+::vec2 translation)=0
+\begin{DoxyCompactList}\small\item\em Sets the translation of the drawable. \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_i_drawable_af01e6d2c9ad16b86f69cda7588fa16c6}{get\+Scale}} ()=0
+\begin{DoxyCompactList}\small\item\em Used to retrieve the current scaling applied to the drawable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_i_drawable_a611b0b33d360c5a6fc09b9c1ef5ff1e8}{set\+Scale}} (glm\+::vec2 scale)=0
+\begin{DoxyCompactList}\small\item\em Sets the scaling of the drawable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_drawable_a814e424836c1783279874ec5d5e01e56}\label{class_i_drawable_a814e424836c1783279874ec5d5e01e56}} 
+\index{IDrawable@{IDrawable}!clone@{clone}}
+\index{clone@{clone}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_i_drawable}{IDrawable}}$\ast$ IDrawable\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to create a copy of the drawable. 
+
+\begin{DoxyReturn}{Returns}
+The copy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_afd00b9919be78dac76928505134bc2e0}\label{class_i_drawable_afd00b9919be78dac76928505134bc2e0}} 
+\index{IDrawable@{IDrawable}!getCenterPoint@{getCenterPoint}}
+\index{getCenterPoint@{getCenterPoint}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getCenterPoint()}{getCenterPoint()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 IDrawable\+::get\+Center\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the center of the drawable, for example for scaling. It is calculated by averaging all points forming the shape. 
+
+\begin{DoxyReturn}{Returns}
+The center of a shape. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_a695a97dd99abfb924bb11a2954af195d}\label{class_i_drawable_a695a97dd99abfb924bb11a2954af195d}} 
+\index{IDrawable@{IDrawable}!getColor@{getColor}}
+\index{getColor@{getColor}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getColor()}{getColor()}}
+{\footnotesize\ttfamily virtual glm\+::vec4 IDrawable\+::get\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the current color of the drawable. 
+
+\begin{DoxyReturn}{Returns}
+An rgba shape 4-\/dimensional vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_a155ac70d472ef64f0138ce4c7d623a95}\label{class_i_drawable_a155ac70d472ef64f0138ce4c7d623a95}} 
+\index{IDrawable@{IDrawable}!getElementData@{getElementData}}
+\index{getElementData@{getElementData}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getElementData()}{getElementData()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$unsigned int$>$ IDrawable\+::get\+Element\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the triangle formation data. 
+
+\begin{DoxyReturn}{Returns}
+a vector of vector index combinations that form the triangles of the drawable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_af01e6d2c9ad16b86f69cda7588fa16c6}\label{class_i_drawable_af01e6d2c9ad16b86f69cda7588fa16c6}} 
+\index{IDrawable@{IDrawable}!getScale@{getScale}}
+\index{getScale@{getScale}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 IDrawable\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the current scaling applied to the drawable. 
+
+\begin{DoxyReturn}{Returns}
+The scale vector. vec2(1.\+0f, 1.\+0f) is the default. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_ab7a40a77740ae3edbaa4d87212be5346}\label{class_i_drawable_ab7a40a77740ae3edbaa4d87212be5346}} 
+\index{IDrawable@{IDrawable}!getTexCoordsData@{getTexCoordsData}}
+\index{getTexCoordsData@{getTexCoordsData}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getTexCoordsData()}{getTexCoordsData()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$glm\+::vec2$>$ IDrawable\+::get\+Tex\+Coords\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the texture coordinate data. 
+
+\begin{DoxyReturn}{Returns}
+A vector of texture coordinates for each vertex. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_a3efc614e1e207341fde7fc79e7bffa3b}\label{class_i_drawable_a3efc614e1e207341fde7fc79e7bffa3b}} 
+\index{IDrawable@{IDrawable}!getTexPath@{getTexPath}}
+\index{getTexPath@{getTexPath}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getTexPath()}{getTexPath()}}
+{\footnotesize\ttfamily virtual std\+::string IDrawable\+::get\+Tex\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the texture path of the drawable. 
+
+\begin{DoxyReturn}{Returns}
+The texture path assigned to the drawable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_a6a322029aa187e417f384fbe74ca816f}\label{class_i_drawable_a6a322029aa187e417f384fbe74ca816f}} 
+\index{IDrawable@{IDrawable}!getTranslation@{getTranslation}}
+\index{getTranslation@{getTranslation}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getTranslation()}{getTranslation()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 IDrawable\+::get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the current translation of the drawable. 
+
+\begin{DoxyReturn}{Returns}
+The translation vector. vec2(0.\+0f, 0.\+0f) is the default. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_aeef2059ed5135fc50c90044de2899568}\label{class_i_drawable_aeef2059ed5135fc50c90044de2899568}} 
+\index{IDrawable@{IDrawable}!getVertexData@{getVertexData}}
+\index{getVertexData@{getVertexData}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{getVertexData()}{getVertexData()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$glm\+::vec2$>$ IDrawable\+::get\+Vertex\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Used to retrieve the vertex position data. 
+
+\begin{DoxyReturn}{Returns}
+A vector of all vertex positions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_i_drawable_adf27746231399178c3fd34469d46beff}\label{class_i_drawable_adf27746231399178c3fd34469d46beff}} 
+\index{IDrawable@{IDrawable}!setColor@{setColor}}
+\index{setColor@{setColor}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily virtual void IDrawable\+::set\+Color (\begin{DoxyParamCaption}\item[{glm\+::vec4}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the color of the drawable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color in the rgba format. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_drawable_a611b0b33d360c5a6fc09b9c1ef5ff1e8}\label{class_i_drawable_a611b0b33d360c5a6fc09b9c1ef5ff1e8}} 
+\index{IDrawable@{IDrawable}!setScale@{setScale}}
+\index{setScale@{setScale}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily virtual void IDrawable\+::set\+Scale (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the scaling of the drawable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scale} & The scale vector. vec2(1.\+0f, 1.\+0f) is the default. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_i_drawable_a23f2f1b002766d250521fc585dae53cc}\label{class_i_drawable_a23f2f1b002766d250521fc585dae53cc}} 
+\index{IDrawable@{IDrawable}!setTranslation@{setTranslation}}
+\index{setTranslation@{setTranslation}!IDrawable@{IDrawable}}
+\doxysubsubsection{\texorpdfstring{setTranslation()}{setTranslation()}}
+{\footnotesize\ttfamily virtual void IDrawable\+::set\+Translation (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{translation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the translation of the drawable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em translation} & The translation vector. vec2(0.\+0f, 0.\+0f) is the default. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IDrawable.\+h\end{DoxyCompactItemize}
