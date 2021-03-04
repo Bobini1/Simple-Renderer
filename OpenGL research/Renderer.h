@@ -17,14 +17,14 @@ class Renderer
 public:
 
 	/**
-		 * @brief Initializes the texture functionality by creating immutable storage for textures.
-		 * @details This storage provides incredible speed at the cost of wasting vram if the textures aren't of similar sizes.
-		 This is because the width and height of the storage need to be able to fit the biggest texture.
-		 Smaller textures will use "slots" of the same size as the biggest texture.
-		 * @param maxTexWidth The height of the texture storage. Texture used in the program can't be higher than this.
-		 * @param maxTexHeight The width of the texture storage. Texture used in the program can't be wider than this.
-		 * @param numTextures The depth of the texture storage. There can't be more individual textures than this number in the program.
-		*/
+	* @brief Initializes the texture functionality by creating immutable storage for textures.
+	* @details This storage provides incredible speed at the cost of wasting vram if the textures aren't of similar sizes.
+	This is because the width and height of the storage need to be able to fit the biggest texture.
+	Smaller textures will use "slots" of the same size as the biggest texture.
+	* @param maxTexWidth The height of the texture storage. Texture used in the program can't be higher than this.
+	* @param maxTexHeight The width of the texture storage. Texture used in the program can't be wider than this.
+	* @param numTextures The depth of the texture storage. There can't be more individual textures than this number in the program.
+	*/
 	virtual void TexInit(unsigned int maxTexWidth, unsigned int maxTexHeight, unsigned int numTextures) = 0;
 
 	/**
